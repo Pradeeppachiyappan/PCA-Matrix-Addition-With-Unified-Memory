@@ -17,8 +17,8 @@ In the main function set up the device & data size of matrix , perform memory al
 Execute the program and run the terminal . Check the performance using nvprof.
 ## Program : 
 ```
-DEVELOPED BY : SOWMIYA N
-REGISTER NO : 212221230106
+DEVELOPED BY : P.PradeepRaj
+REGISTER NO : 212222240073
 
 #include "common.h"
 #include <cuda_runtime.h>
@@ -190,8 +190,8 @@ int main(int argc, char **argv)
 ```
 ### removing the memsets
 ```
-DEVELOPED BY : SOWMIYA N
-REGISTER NO : 212221230106
+DEVELOPED BY : P.PradeepRaj
+REGISTER NO : 212222240073
 
 #include "common.h"
 #include <cuda_runtime.h>
