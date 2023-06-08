@@ -146,7 +146,7 @@ CHECK(cudaDeviceReset(
 ));return (0);
 }
 ```
-## EXPLANATION:
+## OUTPUT:
 ```
 root@SAV-MLSystem:/home/student/Sidd_Lab_Exp_4# nvcc sumMatrixGPUManaged.cu -
 osumMatrixGPUManaged
@@ -160,7 +160,10 @@ sumMatrix on host: 0.034168 sec
 sumMatrix on gpu : 0.023536 sec <<<(128,128),
 (32,32)>>>root@SAVMLSystem:/home/student/Sidd_Lab_Exp_4#
 ```
+## EXPLANATION:
+1. The memsets are used to initialize the hostRef and gpuRef arrays to zero before the computation of the sumMatrixOnHost and sumMatrixGPU functions respectively. Removing these memsets may result in incorrect results if there is any existing data in these arrays.
 
+2. However, since these arrays are allocated using cudaMallocManaged, they are already initialized to zero by default. Therefore, removing the memsets would not affect the correctness of the program.
 ## Result:
 Thus, the Matrix Addition with Unified Memory has been successfully performed and removing the
 ‘memset’ functions did not have a significant impact on the performance of the program.
